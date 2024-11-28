@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.CartPage;
+import pageObjects.OrdersPage;
 
 public class AbstractComponents {
 	
@@ -26,6 +27,9 @@ public class AbstractComponents {
 	@FindBy(css="[routerlink*='cart']")
 	WebElement cartHeader;
 	
+	@FindBy(css="[routerlink*=myorder]")
+	WebElement orderHeader;
+	
 	@FindBy(css=".cartSection h3")
 	List<WebElement> productTitles;
 	
@@ -33,9 +37,14 @@ public class AbstractComponents {
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
-	//List<WebElement> products = driver.findElements(By.cssSelector(".mb-3"));
+	
 
 }
+	
+	public void waitForWebElementToAppear(WebElement findBy) {
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.visibilityOf(findBy));
+	}
 	
 	public void waitForElementToDisappear(WebElement  ele) {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
@@ -54,7 +63,11 @@ public class AbstractComponents {
 		return cartPage;
 		
 	}
-	
+	public OrdersPage goToOrdersPage() {
+		orderHeader.click();
+		OrdersPage ordersPage =	new OrdersPage(driver);
+		return ordersPage;
+	}
 	 public static void clickElementUsingJS(WebDriver driver, String cssSelector) {
 	        // Find the element by CSS selector
 	        WebElement element = driver.findElement(By.cssSelector(cssSelector));

@@ -1,4 +1,4 @@
-package rah;
+package ChrisAcademyTest;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;

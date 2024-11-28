@@ -36,10 +36,17 @@ public class CartPage extends AbstractComponents{
 	@FindBy(css=".cartSection h3")
 	List<WebElement> cartProduct;
 	
+	@FindBy(css=".cartSection h3")
+	WebElement singleProduct;
+	
 	
 	public Boolean verifyProductsDisplay(String targetProductName) {
 	Boolean match =	cartProducts.stream().anyMatch(product ->product.getText().equalsIgnoreCase(targetProductName));
 	return match;
+	}
+	
+	public Boolean verifySingleProductDisplayed() {
+		 return singleProduct.isDisplayed();
 	}
 	
 	public Boolean verifyProductDisplay(String targetProductName) {

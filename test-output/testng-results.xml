@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-28T07:50:07 GMT" name="Suite" finished-at="2024-11-28T07:51:42 GMT" duration-ms="95595">
+    <groups>
+      <group name="PurchaseOrder">
+        <method signature="SubmitOrderTests.submitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" name="submitOrder" class="ChrisAcademyTest.SubmitOrderTests"/>
+      </group> <!-- PurchaseOrder -->
+    </groups>
+    <test started-at="2024-11-28T07:50:07 GMT" name="Submit Order Test" finished-at="2024-11-28T07:51:42 GMT" duration-ms="95510">
+      <class name="ChrisAcademyTest.SubmitOrderTests">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:50:07 GMT" name="launchApplication" finished-at="2024-11-28T07:50:12 GMT" duration-ms="5507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:50:12 GMT" name="submitOrder" data-provider="getData" finished-at="2024-11-28T07:50:43 GMT" duration-ms="30830" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[christophodibo@yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Father70]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZARA COAT 3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:50:43 GMT" name="tearDown" finished-at="2024-11-28T07:50:44 GMT" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:50:44 GMT" name="launchApplication" finished-at="2024-11-28T07:50:48 GMT" duration-ms="4155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:50:48 GMT" name="submitOrder" data-provider="getData" finished-at="2024-11-28T07:51:07 GMT" duration-ms="19359" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[anshika@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Iamking@000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ADIDAS ORIGINAL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:51:07 GMT" name="tearDown" finished-at="2024-11-28T07:51:07 GMT" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:51:07 GMT" name="launchApplication" finished-at="2024-11-28T07:51:11 GMT" duration-ms="4014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:51:11 GMT" name="submitOrder" data-provider="getData" finished-at="2024-11-28T07:51:42 GMT" duration-ms="30770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shetty@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Iamking@000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ADIDAS ORIGINAL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ChrisAcademyTest.SubmitOrderTests@1a942c18]" started-at="2024-11-28T07:51:42 GMT" name="tearDown" finished-at="2024-11-28T07:51:42 GMT" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ChrisAcademyTest.SubmitOrderTests -->
+    </test> <!-- Submit Order Test -->
+    <test started-at="2024-11-28T07:51:42 GMT" name="Error validation Test" finished-at="2024-11-28T07:51:42 GMT" duration-ms="4">
+    </test> <!-- Error validation Test -->
+  </suite> <!-- Suite -->
+</testng-results>
