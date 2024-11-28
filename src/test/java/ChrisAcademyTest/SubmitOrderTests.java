@@ -1,5 +1,6 @@
 package ChrisAcademyTest;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -18,16 +19,16 @@ public class SubmitOrderTests extends BaseTest {
 	public String targetProductName = "ZARA COAT 3";
 	
 	@Test(dataProvider = "getData",groups= {"PurchaseOrder"})
-	public void submitOrder (String email,String password, String targetProductName) throws IOException, InterruptedException{
+	public void submitOrder (HashMap<String,String> input) throws IOException, InterruptedException{
 		// purpose is to get rid of object creation
 		
 		
-		ProductPage productPage = landingPage.logiApplication(email, password);
+		ProductPage productPage = landingPage.logiApplication(input.get("email"),input.get("password"));
 		
 		
 		//ProductPage  productPage = new ProductPage(driver);
 		List<WebElement> products =	productPage.getProductList();
-		productPage.addProductToCart(targetProductName);
+		productPage.addProductToCart(input.get("targetProductName"));
 		
 		Thread.sleep(3000);
 		CartPage cartPage =productPage.goToCartPage();
@@ -56,7 +57,23 @@ public class SubmitOrderTests extends BaseTest {
 	
 	@DataProvider
 	public Object[][] getData() {
-	return	new Object[][] { {"christophodibo@yahoo.com","Father70","ZARA COAT 3"},{"anshika@gmail.com","Iamking@000","ADIDAS ORIGINAL"}  ,{"shetty@gmail.com","Iamking@000","ADIDAS ORIGINAL"}    };
+		
+		HashMap<String,String> map = new HashMap<String,String> ();
+		map.put("email", "christophodibo@yahoo.com");
+		map.put("password", "Father70");
+		map.put("targetProductName", "ZARA COAT 3");
+		
+		HashMap<String,String> map1 = new HashMap<String,String> ();
+		map1.put("email", "anshika@gmail.com");
+		map1.put("password", "Iamking@000");
+		map1.put("targetProductName", "ADIDAS ORIGINAL");
+		
+		HashMap<String,String> map2 = new HashMap<String,String> ();
+		map2.put("email", "shetty@gmail.com");
+		map2.put("password", "Iamking@000");
+		map2.put("targetProductName", "ADIDAS ORIGINAL");
+		
+	return	new Object[][] {{map}, {map1},{map2}};
 	}
 
 }
